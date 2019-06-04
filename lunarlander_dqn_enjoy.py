@@ -1,5 +1,5 @@
+import sys
 import gym
-
 from stable_baselines.common.vec_env import DummyVecEnv
 from stable_baselines import DQN
 
@@ -8,7 +8,7 @@ env = gym.make('LunarLander-v2')
 env = DummyVecEnv([lambda: env])
 
 # Load the trained agent
-model = DQN.load("lunarlander-dqn")
+model = DQN.load(sys.argv[1])
 
 # Enjoy trained agent
 obs = env.reset()

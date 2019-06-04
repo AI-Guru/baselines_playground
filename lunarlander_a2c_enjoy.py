@@ -1,5 +1,5 @@
+import sys
 import gym
-
 from stable_baselines.common.vec_env import DummyVecEnv
 from stable_baselines import A2C
 
@@ -8,7 +8,7 @@ env = gym.make('LunarLander-v2')
 env = DummyVecEnv([lambda: env])
 
 # Load the trained agent
-model = A2C.load("lunarlander-a2c")
+model = A2C.load(sys.argv[1])
 
 # Enjoy trained agent
 obs = env.reset()
