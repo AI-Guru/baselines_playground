@@ -4,8 +4,8 @@ import gym
 import gym_duckietown
 from gym_duckietown.envs.duckietown_env import DuckietownEnv
 
-from stable_baselines.common.vec_env import *
 from stable_baselines import *
+from stable_baselines.common.vec_env import *
 from stable_baselines.common.atari_wrappers import *
 
 #DuckietownEnv.get_action_meanings = get_action_meanings

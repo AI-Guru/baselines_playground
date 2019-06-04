@@ -5,7 +5,6 @@ from stable_baselines.deepq.policies import MlpPolicy
 from stable_baselines import DQN
 
 
-
 # Create and wrap the environment.
 env = gym.make('LunarLander-v2')
 env = DummyVecEnv([lambda: env])

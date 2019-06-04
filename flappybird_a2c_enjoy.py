@@ -4,7 +4,6 @@ import gym
 import gym_ple
 
 from stable_baselines import *
-from stable_baselines.common.policies import *
 from stable_baselines.common.vec_env import *
 from stable_baselines.common.atari_wrappers import *
 
@@ -24,7 +23,7 @@ env = DummyVecEnv([lambda:env])
 env = VecFrameStack(env, n_stack=4)
 
 # Load the trained agent
-model = A2C.load(sys.argv[1], env=env)
+model = A2C.load(sys.argv[1])
 
 # Enjoy trained agent
 obs = env.reset()
