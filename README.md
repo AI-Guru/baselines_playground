@@ -11,6 +11,10 @@
 
 ## Running the examples.
 
+```
+python flappybird_dqn_enjoy.py models/flappybird-dqn.pkl
+```
+
 
 ```
 python lunarlander_dqn_enjoy.py models/lunarlander-dqn.pkl

@@ -24,7 +24,7 @@ env = DummyVecEnv([lambda:env])
 env = VecFrameStack(env, n_stack=4)
 
 # Load the trained agent
-model = DQN.load(sys.argv[1], env=env)
+model = DQN.load(sys.argv[1])
 
 # Enjoy trained agent
 obs = env.reset()
